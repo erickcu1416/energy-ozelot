@@ -14,6 +14,7 @@ export class PopoverComponent implements OnInit {
 
   ngOnInit() {}
 
+  // Al cerrar la cesión elimina el storage y redirecciona a la url
   tryLogout() {
     this.popoverCtrl.dismiss();
     this.userService.deleteStorageUser();

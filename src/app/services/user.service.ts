@@ -15,10 +15,12 @@ export class UserService {
     private platform: Platform,
   ) { }
 
+  // Almacena una clave en el proceso para poder mantener mientrás la aplicación no es cerrada
   saved() {
     this.user = true;
   }
 
+  // Guarda el dato en el storage
   saveStorage() {
     this.key = 'loged';
     if (this.platform.is('cordova')) {
@@ -32,6 +34,7 @@ export class UserService {
     }
   }
 
+  // Carga el dato en el storage
   loadStorage() {
     return new Promise((resolve, reject) => {
       if (this.platform.is('cordova')) {
@@ -58,6 +61,7 @@ export class UserService {
     });
   }
 
+  // Elimina el storage
   deleteStorageUser() {
     this.key = null;
     this.user = false;

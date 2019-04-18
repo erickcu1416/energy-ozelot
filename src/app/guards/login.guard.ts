@@ -18,10 +18,14 @@ export class LoginGuard implements CanActivate {
       this.userService.loadStorage().then(
         data => {
           if (data) {
+            // En dado caso que exista el storage almacenado, será inmediatamente redireccionado
+            // al home y no podrá acceder al login
+
             console.log('Existe estorage');
             this.router.navigate(['/home']);
             return resolve(false);
           } else {
+            // Si no existe el storage, podrá acceder al login
             console.log('No Existe estorage');
             return resolve(true);
           }

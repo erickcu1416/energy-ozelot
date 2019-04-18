@@ -23,15 +23,20 @@ export class LoginPage implements OnInit {
   }
 
   tryLogin() {
+    // Valida los campos
     if (this.password === '' || this.email === '')  {
       this.ctrlService.presentToast('Necesitas llenar todos los campos.', 2000);
     } else if (this.email === 'agranja1@gmail.com' || this.password === 'Password1.' ) {
 
       if (this.checkbox === true) {
+        // Si seleccionó manter sesión almacena en el storage
+
         this.userService.saveStorage();
         this.router.navigateByUrl('/home');
         this.checkbox = false;
       } else {
+        // Si no seleccionó manter sesión almacena en el proceso
+
         this.userService.saved();
         console.log('user', this.userService.user);
         this.router.navigateByUrl('/home');
@@ -39,6 +44,9 @@ export class LoginPage implements OnInit {
       }
       this.password = '';
       this.email = '';
+
+      // Este era el metodo para hacer la petición.
+
       // const body = {
       //   email: this.email,
       //   password: this.password,

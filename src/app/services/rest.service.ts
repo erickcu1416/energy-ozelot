@@ -10,6 +10,7 @@ export class RestService {
 
   constructor(private httpClient: HttpClient) { }
 
+  // Metodo para hacer petición post
   doLogin(body): Observable <any> {
     const params = JSON.stringify(body);
     const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Cache-Control': 'no-cache'});

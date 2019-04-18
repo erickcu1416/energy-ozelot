@@ -19,9 +19,9 @@ import { LoginGuard } from './guards/login.guard';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [ 
-    FormsModule, 
-    MbscModule,BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    FormsModule,
+    MbscModule, BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,
