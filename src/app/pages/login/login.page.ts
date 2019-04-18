@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
   tryLogin() {
     if (this.password === '' || this.email === '')  {
       this.ctrlService.presentToast('Necesitas llenar todos los campos.', 2000);
-    } else if (this.email === 'a' || this.password === 'a' ) {
+    } else if (this.email === 'agranja1@gmail.com' || this.password === 'Password1.' ) {
 
       if (this.checkbox === true) {
         this.userService.saveStorage();
