@@ -1,5 +1,7 @@
 {
   "name": "energy",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

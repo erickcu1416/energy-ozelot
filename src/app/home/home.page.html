@@ -1,14 +1,141 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="secondary">
+            <ion-button color="warning">
+                <ion-icon slot="icon-only" name="notifications"></ion-icon>
+            </ion-button>
+            <ion-button color="primary" (click)="showPop($event)">
+                <ion-icon slot="icon-only" name="contact"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title text-center> <b>ENERGY KEEPER</b> </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content color="light">
+    <ion-text>
+        <h5 class="text-min" text-center> <b>Estado Actual</b> </h5>
+        <h2 class="text-lighter" text-center> Acometida Principal </h2>
+    </ion-text>
+    <!-- <div class="ion-padding">
+
+    </div> -->
+    <div class="category-block">
+        <div>
+            <ion-row no-padding>
+                <ion-col text-left button tappable align-self-center>
+                    <ion-item button>
+                        <ion-avatar slot="start">
+                            <img src="../../assets/icon/building-icon-25.png">
+                        </ion-avatar>
+                        <b>
+                            Edificios
+                        </b>
+                        <ion-icon slot="end" name="arrow-forward" mode="ios"></ion-icon>
+                    </ion-item>
+                    <ion-item button (click)="expanded = !expanded">
+                        <ion-avatar slot="start">
+                            <img src="../../assets/icon/biometrics_icon.jpg">
+                        </ion-avatar>
+                        <b>
+                            Sensores principales
+                        </b>
+                        <ion-icon *ngIf="!expanded" slot="end" name="arrow-forward" mode="ios"></ion-icon>
+                        <ion-icon *ngIf="expanded" slot="end" name="arrow-up" mode="ios"></ion-icon>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <div *ngIf="expanded">
+                <ion-text>
+                    <h5 class="title-section" text-center>Sensor 1</h5>
+                </ion-text>
+                <hr class="style1">
+                <ion-card class="card-main" color="primary">
+                    <ion-card-header>
+                        <ion-card-subtitle>Potencia</ion-card-subtitle>
+                        <ion-card-title> <b> 1888.6 </b> kw</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-card class="card-1">
+                            <ion-card-header>
+                                <ion-card-subtitle>
+                                    <ion-text color="primary">
+                                        <h5 text-center>Voltaje</h5>
+                                    </ion-text>
+                                </ion-card-subtitle>
+                                <ion-card-title>
+                                    <ion-text color="primary">
+                                        <h1 text-center> <b>120</b>v </h1>
+                                    </ion-text>
+                                </ion-card-title>
+                            </ion-card-header>
+                        </ion-card>
+                        <ion-card class="card-2">
+                            <ion-card-header>
+                                <ion-card-subtitle>
+                                    <ion-text color="primary">
+                                        <h5 text-center>Corriente</h5>
+                                    </ion-text>
+                                </ion-card-subtitle>
+                                <ion-card-title>
+                                    <ion-text color="primary">
+                                        <h1 text-center> <b>15.73</b>A</h1>
+                                    </ion-text>
+                                </ion-card-title>
+                            </ion-card-header>
+                        </ion-card>
+                    </ion-card-content>
+
+                </ion-card>
+
+                <!-- Empieza sensor 2 -->
+                <ion-text>
+                    <h5 class="title-section-2" text-center>Sensor 2</h5>
+                </ion-text>
+                <hr class="style1">
+                <ion-card class="card-main" color="primary">
+                    <ion-card-header>
+                        <ion-card-subtitle>Potencia</ion-card-subtitle>
+                        <ion-card-title> <b> 1888.6 </b> kw</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-card class="card-1">
+                            <ion-card-header>
+                                <ion-card-subtitle>
+                                    <ion-text color="primary">
+                                        <h5 text-center>Voltaje</h5>
+                                    </ion-text>
+                                </ion-card-subtitle>
+                                <ion-card-title>
+                                    <ion-text color="primary">
+                                        <h1 text-center> <b>120</b>v </h1>
+                                    </ion-text>
+                                </ion-card-title>
+                            </ion-card-header>
+                        </ion-card>
+                        <ion-card class="card-2">
+                            <ion-card-header>
+                                <ion-card-subtitle>
+                                    <ion-text color="primary">
+                                        <h5 text-center>Corriente</h5>
+                                    </ion-text>
+                                </ion-card-subtitle>
+                                <ion-card-title>
+                                    <ion-text color="primary">
+                                        <h1 text-center> <b>15.73</b>A</h1>
+                                    </ion-text>
+                                </ion-card-title>
+                            </ion-card-header>
+                        </ion-card>
+                    </ion-card-content>
+
+                </ion-card>
+            </div>
+
+
+
+        </div>
+
+    </div>
 </ion-content>

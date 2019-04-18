@@ -1,0 +1,23 @@
+<ion-header no-border>
+    <ion-toolbar [class.show-background]="showToolbar">
+        <ion-title text-center> <b>ENERGY KEEPER</b> </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding fullscreen transparent>
+    <div class="down-position">
+        <ion-item>
+            <ion-input [(ngModel)]="email" placeholder="Correo Electrónico"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input [(ngModel)]="password" placeholder="Contraseña" type="password"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-checkbox slot="start" [(ngModel)]="checkbox"></ion-checkbox>
+            <ion-label class="check-text">Mantener mi sesión abierta</ion-label>
+        </ion-item>
+        <div text-center>
+            <ion-button (click)="tryLogin()">INICIAR SESIÓN</ion-button>
+        </div>
+    </div>
+</ion-content>

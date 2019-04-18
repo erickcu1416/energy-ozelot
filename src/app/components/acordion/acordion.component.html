@@ -1,0 +1,37 @@
+<ion-content>
+    <mbsc-page>
+        <mbsc-form [options]="formSettings">
+            <mbsc-note color="primary">Use the accordion on forms to open only one panel at a time.</mbsc-note>
+
+            <div class="mbsc-btn-group-block">
+                <mbsc-button (click)="toggleLast()">Toggle last panel</mbsc-button>
+                <mbsc-button (click)="closeAll()">Close all panels</mbsc-button>
+            </div>
+        </mbsc-form>
+
+        <mbsc-accordion>
+
+            <mbsc-card collapsible #carl="mobiscroll">
+                <mbsc-card-header>
+                    <mbsc-avatar src="//demo.mobiscroll.comhttps://img.mobiscroll.com/demos/m2.png"></mbsc-avatar>
+                    <mbsc-card-title class="mbsc-bold">Carl Hambledon</mbsc-card-title>
+                    <mbsc-card-subtitle>Washaway Ltd.</mbsc-card-subtitle>
+                </mbsc-card-header>
+                <mbsc-card-content>
+                    <mbsc-listview [options]="listviewSettings">
+                        <mbsc-listview-item icon="material-email">
+                            <p>Email</p>
+                            <h4><a href="mailto:carl.h@washaway.com">carl.h@washaway.com</a></h4>
+                        </mbsc-listview-item>
+                        <mbsc-listview-item icon="material-phone-iphone">
+                            <p>Mobile</p>
+                            <h4><a href="tel:(202) 553-5247">(202) 553-5247</a></h4>
+                        </mbsc-listview-item>
+                    </mbsc-listview>
+                </mbsc-card-content>
+            </mbsc-card>
+
+
+        </mbsc-accordion>
+    </mbsc-page>
+</ion-content>

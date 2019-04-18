@@ -1,0 +1,37 @@
+ion-title {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+ion-content {
+    --background: #fff url('../../../assets/img/3.jpg') no-repeat center center / cover;
+}
+
+ion-item {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+ion-checkbox {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+.check-text {
+    color: gray;
+}
+
+.down-position {
+    margin-top: 115%;
+}
+
+@media screen and (max-height: 775px) {
+    .down-position {
+        margin-top: 80%;
+    }
+}
